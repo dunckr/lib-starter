@@ -27,6 +27,10 @@ npm run test
 npm run build
 ```
 
+## Demo
+
+[http://dunckr.github.io/lib-starter/example/](http://dunckr.github.io/lib-starter/example/)
+
 ## License
 
 MIT © [Duncan Beaton](http://dunckr.com)
