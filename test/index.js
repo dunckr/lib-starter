@@ -1,10 +1,10 @@
 import expect from 'expect'
 import describedSpec from '../src';
 
-describe('index', function() {
+describe('index', () => {
 
-  it('should return a message', function() {
-    expect(describedSpec()).toBe('Hello Lib Starter');
+  it('should return a list of features', () => {
+    expect(describedSpec().length).toBe(6);
   });
 
 });

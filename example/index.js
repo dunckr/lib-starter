@@ -1,4 +1,9 @@
-import LibStarter from '../src';
+import Features from '../src';
 
-var el = document.getElementById('message');
-el.innerText = LibStarter();
+const parent = document.getElementById('features');
+
+Features().map((feature) => {
+  var el = document.createElement('li');
+  el.innerText = feature;
+  parent.appendChild(el);
+});
