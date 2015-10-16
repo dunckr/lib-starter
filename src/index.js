@@ -1,3 +1,3 @@
 export default () => {
-  return 'Hello World';
+  return 'Hello Lib Starter';
 };

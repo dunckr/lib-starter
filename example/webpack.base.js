@@ -3,13 +3,13 @@ var webpack = require('webpack');
 
 var paths = {
   SRC: path.resolve(__dirname, '../src'),
-  EXAMPLES: path.resolve(__dirname, '.')
+  EXAMPLE: path.resolve(__dirname, '.')
 };
 
 module.exports = {
 
   output: {
-    path: paths.EXAMPLES,
+    path: paths.EXAMPLE,
     filename: 'bundle.js'
   },
 
@@ -18,7 +18,7 @@ module.exports = {
       {
         test: /\.js?$/,
         loader: 'babel?stage=0&loose',
-        include: [paths.SRC, paths.EXAMPLES],
+        include: [paths.SRC, paths.EXAMPLE],
         exclude: /node_modules/
       }
     ],

@@ -5,12 +5,12 @@ var assign = require('object-assign');
 
 var paths = {
   SRC: path.resolve(__dirname, '../src'),
-  EXAMPLES: path.resolve(__dirname, '.')
+  EXAMPLE: path.resolve(__dirname, '.')
 };
 
 module.exports = assign(webpackBase, {
 
-  entry: paths.EXAMPLES + '/examples.js',
+  entry: paths.EXAMPLE + '/index.js',
 
   plugins: [
     new webpack.DefinePlugin({

@@ -1,10 +1,10 @@
 import expect from 'expect'
-import describeSpec from '../src';
+import describedSpec from '../src';
 
 describe('index', function() {
 
-  it('should return message', function() {
-    expect(describeSpec()).toBe('Hello World');
+  it('should return a message', function() {
+    expect(describedSpec()).toBe('Hello Lib Starter');
   });
 
 });

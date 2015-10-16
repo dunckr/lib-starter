@@ -4,13 +4,13 @@
   "description": "Library starter boilerplate using Babel and Webpack",
   "main": "index.js",
   "scripts": {
-    "start": "npm run clean && webpack-dev-server --config examples/webpack.config.js --progress --hot --inline",
+    "start": "npm run clean && webpack-dev-server --config example/webpack.config.js --progress --hot --inline",
     "test": "karma start",
     "lint": "eslint src",
     "build": "npm run lint && karma start --single-run && npm run build-examples && npm run build-lib",
     "build-lib": "rm -rf lib && mkdir lib && babel --loose --stage 0 --out-dir lib src",
-    "build-examples": "npm run clean && webpack --config examples/webpack.config.build.js --progress",
-    "clean": "rm -f examples/bundle.js examples/bundle.js.map",
+    "build-examples": "npm run clean && webpack --config example/webpack.config.build.js --progress",
+    "clean": "rm -f example/bundle.js example/bundle.js.map",
     "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master"
   },
   "repository": {
