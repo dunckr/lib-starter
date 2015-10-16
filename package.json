@@ -10,7 +10,8 @@
     "build": "npm run lint && karma start --single-run && npm run build-examples && npm run build-lib",
     "build-lib": "rm -rf lib && mkdir lib && babel --loose --stage 0 --out-dir lib src",
     "build-examples": "npm run clean && webpack --config examples/webpack.config.build.js --progress",
-    "clean": "rm -f examples/bundle.js examples/bundle.js.map"
+    "clean": "rm -f examples/bundle.js examples/bundle.js.map",
+    "gh-pages": "git checkout gh-pages && git rebase origin/master --force-rebase && npm run build && git add . && git commit --amend --no-edit && git push --force && git checkout master"
   },
   "repository": {
     "type": "git",
