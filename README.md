@@ -9,9 +9,19 @@ Simple boilerplate for creating Libraries. Using Babel, Webpack, Karma and ESLin
 + Library Independant (No React but can be easily included)
 + Build (Webpack)
 
+## Demo
+
+[http://dunckr.github.io/lib-starter/example/](http://dunckr.github.io/lib-starter/example/)
+
+## Installation
+
+```sh
+npm install lib-starter
+```
+
 ## Dev
 
-```
+```sh
 npm run start
 ```
 
@@ -23,13 +33,9 @@ npm run test
 
 ## Build
 
-```
+```sh
 npm run build
 ```
-
-## Demo
-
-[http://dunckr.github.io/lib-starter/example/](http://dunckr.github.io/lib-starter/example/)
 
 ## License
 
