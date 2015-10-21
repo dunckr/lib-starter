@@ -2,15 +2,44 @@
 <html lang="en">
 
 <head>
+  <title>Lib Starter</title>
+  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      font: 100%/1.5 "Source Sans Pro", sans-serif;
+      color: #3d464d;
+      -webkit-font-smoothing max-width: 38rem;
+      max-width: 38rem;
+      margin: 0 auto;
+    }
+    main,
+    section,
+    footer {
+      padding: 40px 0;
+    }
+    section {
+      text-align: center;
+    }
+    footer {
+      float: right;
+    }
+  </style>
 </head>
 
 <body>
-  <section>
+  <main>
     <h1>Lib Starter</h1>
     <p>Simple boilerplate for creating Libraries. Using Babel, Webpack, Karma and ESLint.</p>
-    <ul id='features'></ul>
+    <ul id="features"></ul>
+  </main>
+  <section>
+    <a href="https://github.com/dunckr/lib-starter">View on Github</a>
   </section>
-  <script src='bundle.js'></script>
+  <footer>
+    <p>by <a href="http://dunckr.com">dunckr</a></p>
+  </footer>
+
+  <script src="bundle.js"></script>
 </body>
 
 </html>
