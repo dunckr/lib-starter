@@ -27,7 +27,7 @@ npm run start
 
 ## Test
 
-```
+```sh
 npm run test
 ```
 
