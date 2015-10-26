@@ -43,7 +43,6 @@ if (TARGET === 'start' || !TARGET) {
     devtool: 'source-map',
     devServer: {
       contentBase: paths.EXAMPLE,
-      hot: true,
       inline: true,
       progress: true,
       port: '8080'

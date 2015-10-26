@@ -1,10 +1,10 @@
 export default () => {
   return [
-    'ES2015 (Babel)',
-    'Livereloading (Webpack)',
-    'Testing (Karma + Mocha + Expect)',
-    'Linting (ESLint)',
-    'Library Independant (No React but can be easily included)',
-    'Build (Webpack)'
+    'https://github.com/babel/babel',
+    'https://github.com/webpack/webpack',
+    'https://github.com/eslint/eslint',
+    'https://github.com/karma-runner/karma',
+    'https://github.com/mochajs/mocha',
+    'https://github.com/mjackson/expect'
   ];
 };
