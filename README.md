@@ -1,13 +1,15 @@
 # Lib Starter
 
-Simple boilerplate for creating Libraries. Using Babel, Webpack, Karma and ESLint.
+Simple boilerplate for creating Libraries.
 
-+ ES2015 (Babel)
-+ Livereloading (Webpack)
-+ Testing (Karma + Mocha + Expect)
-+ Linting (ESLint)
-+ Library Independant (No React but can be easily included)
-+ Build (Webpack)
+Using:
+
++ [Babel](https://github.com/babel/babel)
++ [Webpack](https://github.com/webpack/webpack)
++ [ESLint](https://github.com/eslint/eslint)
++ [Karma](https://github.com/karma-runner/karma)
++ [Mocha](https://github.com/mochajs/mocha)
++ [Expect](https://github.com/mjackson/expect)
 
 ## Demo
 
