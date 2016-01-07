@@ -1,4 +1,4 @@
-# Lib Starter
+# Lib Starter [![Build Status](https://travis-ci.org/dunckr/lib-starter.svg)](https://travis-ci.org/dunckr/lib-starter)
 
 Simple boilerplate for creating Libraries.
 

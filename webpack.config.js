@@ -1,17 +1,17 @@
-import path from 'path';
-import webpack from 'webpack';
-import assign from 'object-assign';
+const path = require('path')
+const webpack = require('webpack')
+const assign = require('object-assign')
 
-const TARGET = process.env.npm_lifecycle_event;
+const TARGET = process.env.npm_lifecycle_event
 const config = {
   library: 'LibStarter',
   filename: 'libstarter'
-};
+}
 const paths = {
   SRC: path.resolve(__dirname, './src'),
   EXAMPLE: path.resolve(__dirname, './example'),
   BUILD: path.resolve(__dirname, './lib')
-};
+}
 
 var webpackBase = {
   output: {
@@ -21,7 +21,7 @@ var webpackBase = {
   module: {
     loaders: [{
       test: /\.js?$/,
-      loader: 'babel?stage=0&loose',
+      loader: 'babel-loader',
       include: [paths.SRC, paths.EXAMPLE],
       exclude: /node_modules/
     }],
@@ -32,7 +32,7 @@ var webpackBase = {
       exclude: /node_modules/
     }]
   }
-};
+}
 
 if (TARGET === 'start' || !TARGET) {
   module.exports = assign(webpackBase, {
@@ -52,7 +52,7 @@ if (TARGET === 'start' || !TARGET) {
         'process.env.NODE_ENV': JSON.stringify('development')
       })
     ]
-  });
+  })
 }
 
 if (TARGET === 'build-example') {
@@ -68,7 +68,7 @@ if (TARGET === 'build-example') {
         }
       })
     ]
-  });
+  })
 }
 
 if (TARGET === 'build-lib') {
@@ -83,7 +83,7 @@ if (TARGET === 'build-lib') {
     module: {
       loaders: [{
         test: /\.js?$/,
-        loader: 'babel?stage=0&loose',
+        loader: 'babel-loader',
         include: [paths.SRC],
         exclude: /node_modules/
       }],
@@ -98,5 +98,5 @@ if (TARGET === 'build-lib') {
         }
       })
     ]
-  });
+  })
 }
