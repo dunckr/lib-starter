@@ -1,6 +1,5 @@
 const path = require('path')
 const webpack = require('webpack')
-const assign = require('object-assign')
 
 const TARGET = process.env.npm_lifecycle_event
 const config = {
@@ -35,7 +34,7 @@ var webpackBase = {
 }
 
 if (TARGET === 'start' || !TARGET) {
-  module.exports = assign(webpackBase, {
+  module.exports = Object.assign(webpackBase, {
     entry: [
       'webpack/hot/dev-server',
       paths.EXAMPLE + '/index.js'
@@ -56,7 +55,7 @@ if (TARGET === 'start' || !TARGET) {
 }
 
 if (TARGET === 'build-example') {
-  module.exports = assign(webpackBase, {
+  module.exports = Object.assign(webpackBase, {
     entry: paths.EXAMPLE + '/index.js',
     plugins: [
       new webpack.DefinePlugin({
@@ -72,7 +71,7 @@ if (TARGET === 'build-example') {
 }
 
 if (TARGET === 'build-lib') {
-  module.exports = assign(webpackBase, {
+  module.exports = Object.assign(webpackBase, {
     entry: paths.SRC,
     output: {
       path: paths.BUILD,
