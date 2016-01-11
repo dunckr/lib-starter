@@ -5,8 +5,8 @@ const TARGET = process.env.npm_lifecycle_event
 const config = {
   library: 'LibStarter',
   filename: 'index',
-  example: 'index',
-  bundle: 'bundle'
+  example: 'index.js',
+  bundle: 'bundle.js'
 }
 const paths = {
   SRC: path.resolve(__dirname, './src'),
@@ -17,7 +17,7 @@ const paths = {
 var webpackBase = {
   output: {
     path: paths.EXAMPLE,
-    filename: `${config.bundle}.js`
+    filename: config.bundle
   },
   module: {
     loaders: [{
@@ -39,7 +39,7 @@ if (TARGET === 'start' || !TARGET) {
   module.exports = Object.assign(webpackBase, {
     entry: [
       'webpack/hot/dev-server',
-      `${paths.EXAMPLE}/${config.example}.js`
+      `${paths.EXAMPLE}/${config.example}`
     ],
     devtool: 'source-map',
     devServer: {
@@ -58,7 +58,7 @@ if (TARGET === 'start' || !TARGET) {
 
 if (TARGET === 'build-example') {
   module.exports = Object.assign(webpackBase, {
-    entry: `${paths.EXAMPLE}/${config.example}.js`,
+    entry: `${paths.EXAMPLE}/${config.example}`,
     plugins: [
       new webpack.DefinePlugin({
         'process.env.NODE_ENV': JSON.stringify('production')
@@ -79,7 +79,7 @@ if (TARGET === 'build-lib') {
       path: paths.BUILD,
       libraryTarget: 'umd',
       library: config.library,
-      filename: config.filename + '.js'
+      filename: `${config.filename}.js`
     },
     module: {
       loaders: [{
